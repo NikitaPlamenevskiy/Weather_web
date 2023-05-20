@@ -16,7 +16,7 @@ export default {
         };
     },
     mounted() {
-        axios.get(`https://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=Астана`)
+        axios.get(`https://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=Астана&days=7&aqi=yes`)
             .then(repsonse => console.log(repsonse));
         // .then(response => this.posts = response.data)
         // .catch(error => cosnole.log(error))
