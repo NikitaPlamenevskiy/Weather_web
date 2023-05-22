@@ -1,7 +1,9 @@
 @import "variables.scss";
+@import "fonts.scss";
 
 body {
     background-image: url('@/assets/img/Background.png');
+    font-family: "Lato";
     margin: 0px auto;
     background-size: cover;
     background-repeat: no-repeat;
