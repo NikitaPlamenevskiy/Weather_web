@@ -1,7 +1,7 @@
 <template>
     <div class="card">
         <div class="aircondition-title">
-            <img class="aircondition-title__image"  src="@/assets/leaf.png" alt="Leaf">
+            <img class="aircondition-title__image"  src="@/assets/img/leaf.png" alt="Leaf">
             <h1 class="aircondition-title__name">Air quality</h1>
         </div>
         <div class="aircondition-quality">
@@ -55,7 +55,7 @@
             </div>
             <div class="aircondition-info__container">
                 <p class="aircondition-info__number">
-                    0.7
+                    0.78
                 </p>
                 <h2 class="aircondition-info__name">
                    CO
@@ -66,6 +66,7 @@
 </template>
 
 <style lang="scss" scoped>
+    @import "@/assets/scss/mixins/card.scss";
     .card{
         color: var(--primary);
         width: 253px;
@@ -73,7 +74,7 @@
         background-color: #6D67D0;
     }
     .aircondition-title{
-        color: var(--h1);
+        color: var(--titleColor);
         display: flex;
         justify-content: center;
         align-items: center;
@@ -90,7 +91,6 @@
             height: 20px;
         }
     }
-
     .aircondition-quality{
         max-width: 60px;
         margin: 0px auto;
@@ -116,7 +116,6 @@
             line-height: 48px;
         }
     }
-
     .aircondition-info{
         display: flex;
         flex-wrap: wrap;

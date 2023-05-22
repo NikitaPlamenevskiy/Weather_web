@@ -11,7 +11,7 @@
 
 
 <style lang="scss">
-  @import "./styles/global.scss";
+  @import "@/assets/scss/global.scss";
   
   .content{
     padding-top: 144px;

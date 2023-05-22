@@ -1,12 +1,13 @@
 <script setup>
-import backgroundUrl from '@/assets/Backgorund_weatherblock.png'
+import backgroundUrl from '@/assets/img/Backgorund_weatherblock.png'
+
 </script>
 
 <template>
     <div class="card" :style="{backgroundImage: `url(${backgroundUrl})`}">
         <div class="weather-block">
             <div class="location">
-                <img class="location__pin"  src="@/assets/pin.png" alt="pin">
+                <img class="location__pin"  src="@/assets/img/pin.png" alt="pin">
                 <h2 class="location__name">
                 Rio do Sul, SC
                 </h2>
@@ -19,7 +20,7 @@ import backgroundUrl from '@/assets/Backgorund_weatherblock.png'
             </h2>
             <div class="statistics-block">
                 <div class="statistics-block__card">
-                    <img class="statistics-block__image" src="@/assets/weather_1.png" alt="Windy">
+                    <img class="statistics-block__image" src="@/assets/img/weather_1.png" alt="Windy">
                     <div>
                         <p class="statistics-block__name">
                         Wind
@@ -30,7 +31,7 @@ import backgroundUrl from '@/assets/Backgorund_weatherblock.png'
                     </div>
                 </div>
                 <div class="statistics-block__card">
-                    <img class="statistics-block__image" src="@/assets/weather_2.png" alt="Windy">
+                    <img class="statistics-block__image" src="@/assets/img/weather_2.png" alt="Windy">
                     <div>
                         <p class="statistics-block__name">
                         Humidity
@@ -41,7 +42,7 @@ import backgroundUrl from '@/assets/Backgorund_weatherblock.png'
                     </div>
                 </div>
                 <div class="statistics-block__card">
-                    <img class="statistics-block__image" src="@/assets/weather_3.png" alt="Windy">
+                    <img class="statistics-block__image" src="@/assets/img/weather_3.png" alt="Windy">
                     <div>
                         <p class="statistics-block__name">
                         Rain
@@ -57,6 +58,7 @@ import backgroundUrl from '@/assets/Backgorund_weatherblock.png'
 </template>
 
 <style lang="scss" scoped>
+    @import "@/assets/scss/mixins/card.scss";
     .card{
         background-repeat: no-repeat;
         width: auto;
@@ -65,7 +67,6 @@ import backgroundUrl from '@/assets/Backgorund_weatherblock.png'
     .weather-block{
         color: var(--primary);
     }
-
     .temperature{
         margin-bottom: 160px;
         font-size: 88px;
@@ -76,13 +77,13 @@ import backgroundUrl from '@/assets/Backgorund_weatherblock.png'
             line-height: 29px;
         }
     }
-
     .location{
         display: flex;
         justify-content: end;
         align-items: center;
-        color: var(--h1);
+        color: var(--titleColor);
         &__name{
+            margin: 0px;
             font-size: 14px;
             font-weight: 400;
             text-align: right;
