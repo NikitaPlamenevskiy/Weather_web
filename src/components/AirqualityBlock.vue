@@ -68,10 +68,11 @@
 <style lang="scss" scoped>
     @import "@/assets/scss/mixins/card.scss";
     .card{
+        @include card;
         color: var(--primary);
         width: 253px;
         height: 200px;
-        background-color: #6D67D0;
+        background-color: var(--backgorund);
     }
     .aircondition-title{
         color: var(--titleColor);
